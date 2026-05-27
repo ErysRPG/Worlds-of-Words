@@ -1,0 +1,22 @@
+{
+    "languages": [
+        {
+            "name": "Fae and Elvish",
+            "V": ["a", "e", "i", "o", "u"],
+            "C": ["l", "r", "s", "n", "th"],
+            "syllables": ["VC", "VVC", "CVC", "CVVC", "V"]
+        },
+        {
+            "name": "Dwarvish and Gnomish",
+            "V": ["a", "i", "o", "u"],
+            "C": ["d", "g", "k", "m", "r"],
+            "syllables": ["CVC", "CCVC", "CVCC"]
+        },
+        {
+            "name": "Draconic and Infernal",
+            "V": ["a", "e", "i", "o", "u", "g", "h", "r"],
+            "C": ["g", "h", "r"],
+            "syllables": ["CCVC", "CVCC", "CVC"]
+        }
+    ]
+}

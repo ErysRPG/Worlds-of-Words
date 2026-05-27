@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worlds of Words - Generator</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="generator.html">Generator</a>
+        <a href="about-me.html">About me</a>
+    </div>
+    <div class="main-content">
+
+        <h2>Syllable Structure</h2>
+        <br>
+        <p>C = Consonant</p>
+        <p>V = Vowel</p>
+        <p>Examples: CVCV = "mala", CVCCV = "malko"</p>
+
+
+
+        <h1>Worlds of Words - Generator</h1>
+        <select value="languages" id="language-select">
+            <option value="lang-elvish">Fae and Elvish</option>
+            <option value="lang-dwarvish">Dwarvish and Gnomish</option>
+            <option value="lang-draconic">Draconic and Infernal</option>
+            <option value="lang-alien">Alien</option>
+            <option value="custom-lang">Custom Language</option>
+        </select>
+
+        <label for="custom-lang-name">Custom Language:</label>
+        <input type="text" id="custom-lang-name" name="custom-lang-name" size="40" placeholder="Language's name" />
+
+        <div class="settings">
+            <label for="sentence-count">Number of sentences:</label>
+            <input type="number" id="sentence-count" name="sentence-count" min="1" max="100" value="5">
+
+            <label for="paragraph-count">Number of paragraphs:</label>
+            <input type="number" id="paragraph-count" name="paragraph-count" min="1" max="100" value="5">
+        </div>
+
+        <div class="custom-lang-settings">
+            <label for="custom-lang-sounds">Custom Language settings</label>
+            <textarea id="custom-lang-sounds" name="custom-lang-sounds"
+                placeholder="Enter sounds separated by a space"></textarea>
+            <textarea id="custom-lang-syllables" name="custom-lang-syllables"
+                placeholder="Enter syllables separated by a space"></textarea>
+        </div>
+        <button id="generate-btn">Generate</button>
+        <div class="output">
+
+        </div>
+        <br>
+        <label for="file-input">Upload a txt file with custom language sounds and syllables:</label>
+        <input type="file" id="file-input" accept=".txt" />
+        <br>
+        <a href="#" id="download-link" download>Download language</a>
+
+    </div>
+
+     <!-- JavaScript -->
+    <script src="app-logic/generatorLogic.js" type="module"></script>
+</body>
+</html>
