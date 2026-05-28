@@ -12,12 +12,13 @@ let uploadedCustomLanguage = null; // Variable to store uploaded custom language
 let clearBtn = document.getElementById("clear-btn");
 
 window.addEventListener('DOMContentLoaded', () => {
-    const generateBtn = document.getElementById('generate-btn');
-    generateBtn.addEventListener('click', () => {
-        // Update chosen language and regenerate paragraphs when the button is clicked
-        chosenItem = chosenLanguage.options[chosenLanguage.selectedIndex].value;
-        // if custom language is selected, load custom data into JSON before generating paragraphs
-        if (chosenItem === "custom-lang") {
+    const generateBtn = document.querySelectorAll('.generate-btn');
+    generateBtn.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Update chosen language and regenerate paragraphs when the button is clicked
+            chosenItem = chosenLanguage.options[chosenLanguage.selectedIndex].value;
+            // if custom language is selected, load custom data into JSON before generating paragraphs
+            if (chosenItem === "custom-lang") {
             loadCustomDataIntoJSON(); // Load custom data into JSON before generating paragraphs
             // Check if required fields are filled out before generating paragraphs
             if (!requiredFieldsIfCustomLanguageSelected()) {
@@ -25,7 +26,7 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }
         result.innerHTML = generateParagraphs(); // Generate paragraphs
-    },
+    })},
         downloadLink.addEventListener('click', () => {
                 saveLanguage(); // Save custom language as JSON file when download link is clicked
         }
@@ -48,7 +49,6 @@ window.addEventListener('DOMContentLoaded', () => {
             };
             reader.readAsText(file);
         }));
-
 
 });
 

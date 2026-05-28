@@ -49,15 +49,29 @@
 }
 
 body {
-  background-color: #d4cab5;
+  background-color: #faf6ef !important;
   color: #4a321b;
   margin: 0;
   padding: 0;
 }
+body .navbar {
+  background-color: #4a321b !important;
+  display: flex;
+}
+body .navbar .nav-link {
+  color: white !important;
+  text-decoration: none;
+  font-family: "Cinzel Decorative", serif;
+  font-size: 18px;
+}
+body .navbar .nav-link:hover {
+  color: #d9c78a !important;
+}
 body .main-content {
-  margin: 20px;
+  margin: 50px;
   padding: 20px;
   font-family: "google-sans-text-regular", sans-serif;
+  text-align: center;
 }
 body .main-content h1 {
   font-family: "Cinzel Decorative", serif;
@@ -73,9 +87,62 @@ body .main-content button {
   border-radius: 5px;
 }
 body .main-content button a {
-  color: inherit;
+  color: white !important;
   text-decoration: none;
+  font-family: "Cinzel Decorative", serif;
 }
 body .main-content button:hover {
   background-color: rgb(16.7606382979, 94.0053191489, 120.2393617021);
+}
+body #language-select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: none;
+  border-bottom: 1px solid #4a321b;
+  margin-bottom: 20px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+body #language-select :focus {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #1781a5;
+}
+body input[type=number] {
+  width: 20%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 1px solid #4a321b;
+  background-color: transparent !important;
+}
+body textarea {
+  width: 30%;
+  height: 100px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: transparent !important;
+  border: none;
+  border-bottom: 1px solid #4a321b;
+  margin-bottom: 20px;
+}
+body .output {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgb(243.9285714286, 235.0714285714, 219.5714285714);
+  border-radius: 5px;
+  min-height: 100px;
+  text-align: justify;
+  font-family: "Charis SIL", serif;
+}
+body .text-link {
+  color: #4a321b;
+  text-decoration: none;
+  font-weight: bold;
+}
+body .text-link:hover {
+  color: #1781a5;
+  font-weight: bold;
 }/*# sourceMappingURL=styles.css.map */

@@ -2,15 +2,33 @@
 @import "fonts";
 
 body {
-    background-color: $background-color;
+    background-color: $background-color !important;
     color: $text-color;
     margin: 0;
     padding: 0;
 
+    .navbar {
+        background-color: $text-color !important;
+        display: flex;
+        
+
+        .nav-link {
+            color: $link-color !important;
+            text-decoration: none;
+            font-family: "Cinzel Decorative", serif;
+            font-size: 18px;
+           
+
+            &:hover {
+                color: $golden-color!important;
+            }
+        }
+    }
     .main-content {
-        margin: 20px;
+        margin: 50px;
         padding: 20px;
         font-family: "google-sans-text-regular", sans-serif;
+        text-align: center;
 
         h1 {
             font-family: "Cinzel Decorative", serif;
@@ -25,10 +43,12 @@ body {
             font-size: 16px;
             cursor: pointer;
             border-radius: 5px;
+            
 
             a {
-                color: inherit;
+                color: $link-color !important;
                 text-decoration: none;
+                font-family: "Cinzel Decorative", serif;
             }
 
             &:hover {
@@ -36,4 +56,67 @@ body {
             }
         }
     }
+
+    // Styles for generator page
+
+    #language-select {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: none;
+        border-bottom: 1px solid $text-color;
+        margin-bottom: 20px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+
+        :focus {
+            border:none;
+            outline: none;
+            border-bottom: 2px solid $accent-color;
+        }
+
+    }
+
+    input[type=number] {
+  width: 20%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 1px solid $text-color;
+  background-color: transparent !important;
+}
+
+     textarea {
+        width: 30%;
+        height: 100px;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        background-color: transparent !important;
+        border: none;
+        border-bottom: 1px solid $text-color;
+        margin-bottom: 20px;
+    }
+
+     .output {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: darken($background-color, 5%);
+        border-radius: 5px;
+        min-height: 100px;
+        text-align: justify;
+        font-family: "Charis SIL", serif;
+    }
+    //About me page
+    .text-link {
+        color: $text-color;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+            color: $accent-color;
+            font-weight: bold;
+        }
+    }
+
 }
