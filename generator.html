@@ -35,19 +35,24 @@
         <div class="custom-lang-settings">
             <label for="custom-lang-sounds">Custom Language settings</label>
             <textarea id="custom-lang-sounds" name="custom-lang-sounds"
-                placeholder="Enter sounds separated by a space, e.g., a a' ê ö b th kh t s rr ñ..."></textarea>
+                placeholder="Enter characters separated by a space, e.g., a a' ê ö b th kh t s rr ñ..."></textarea>
             <textarea id="custom-lang-syllables" name="custom-lang-syllables"
                 placeholder="Enter syllables separated by a space, e.g., CV CVC VCC CCVCC... where C = Consonant, V = Vowel"></textarea>
         </div>
         <button id="generate-btn">Generate</button>
-        <div class="output">
 
-        </div>
-        <br>
         <label for="file-input">Upload a json file with custom language sounds and syllables:</label>
         <input type="file" id="file-input" accept=".json" />
+        <label for="download-link">Or download a template json file to store your own custom language:</label>
         <br>
         <a href="#" id="download-link" download>Download language</a>
+        <br>
+         <h2>Generated output:</h2>
+        <div class="output">
+               
+        </div>
+        
+        
 
     </div>
 
