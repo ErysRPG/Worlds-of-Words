@@ -9,7 +9,7 @@ let result = document.querySelector(".output");
 let downloadLink = document.getElementById("download-link");
 let uploadBtn = document.getElementById("file-input");
 let uploadedCustomLanguage = null; // Variable to store uploaded custom language data
-let clearBtn = document.getElementById("clear-btn");
+let copyBtn = document.getElementById("copy-btn");
 
 window.addEventListener('DOMContentLoaded', () => {
     const generateBtn = document.querySelectorAll('.generate-btn');
@@ -50,8 +50,13 @@ window.addEventListener('DOMContentLoaded', () => {
             reader.readAsText(file);
         }));
 
+        copyBtn.addEventListener('click', () => {
+            // Copy the generated output to the clipboard when the copy button is clicked
+            const outputText = result.innerText; // Get the text content of the output div
+            navigator.clipboard.writeText(outputText) // Use the Clipboard API to write text to the clipboard
+                
 });
-
+});
     function generateParagraphs() {
         let numParagraphs = parseInt(document.getElementById('paragraph-count').value);
         let numSentences = parseInt(document.getElementById('sentence-count').value);
@@ -454,5 +459,3 @@ window.addEventListener('DOMContentLoaded', () => {
         document.getElementById("custom-lang-sounds").value = "";
         document.getElementById("custom-lang-syllables").value = "";
     }
-
-    
