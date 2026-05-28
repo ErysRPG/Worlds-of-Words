@@ -69,14 +69,10 @@ body {
         background-color: transparent;
         border: none;
         outline: none;
-
-        :focus {
-            border:none;
-            outline: none;
-            border-bottom: 2px solid $accent-color;
+        
         }
-
-    }
+        
+    
 
     input[type=number] {
   width: 20%;

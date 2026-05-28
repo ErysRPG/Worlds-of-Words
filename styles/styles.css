@@ -105,11 +105,6 @@ body #language-select {
   border: none;
   outline: none;
 }
-body #language-select :focus {
-  border: none;
-  outline: none;
-  border-bottom: 2px solid #1781a5;
-}
 body input[type=number] {
   width: 20%;
   padding: 12px;
