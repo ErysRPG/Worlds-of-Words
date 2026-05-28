@@ -15,14 +15,6 @@
     </div>
     <div class="main-content">
 
-        <h2>Syllable Structure</h2>
-        <br>
-        <p>C = Consonant</p>
-        <p>V = Vowel</p>
-        <p>Examples: CVCV = "mala", CVCCV = "malko"</p>
-
-
-
         <h1>Worlds of Words - Generator</h1>
         <select value="languages" id="language-select">
             <option value="lang-elvish">Fae and Elvish</option>
@@ -45,15 +37,15 @@
             <textarea id="custom-lang-sounds" name="custom-lang-sounds"
                 placeholder="Enter sounds separated by a space, e.g., a a' ê ö b th kh t s rr ñ..."></textarea>
             <textarea id="custom-lang-syllables" name="custom-lang-syllables"
-                placeholder="Enter syllables separated by a space, e.g., CV CVC VCC CCVCC..."></textarea>
+                placeholder="Enter syllables separated by a space, e.g., CV CVC VCC CCVCC... where C = Consonant, V = Vowel"></textarea>
         </div>
         <button id="generate-btn">Generate</button>
         <div class="output">
 
         </div>
         <br>
-        <label for="file-input">Upload a txt file with custom language sounds and syllables:</label>
-        <input type="file" id="file-input" accept=".txt" />
+        <label for="file-input">Upload a json file with custom language sounds and syllables:</label>
+        <input type="file" id="file-input" accept=".json" />
         <br>
         <a href="#" id="download-link" download>Download language</a>
 

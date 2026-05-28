@@ -6,7 +6,8 @@ let chosenItem = chosenLanguage.options[chosenLanguage.selectedIndex].value;
 let numParagraphs = parseInt(document.getElementById('paragraph-count').value);
 let numSentences = parseInt(document.getElementById('sentence-count').value);
 let result = document.querySelector(".output");
-
+let downloadLink = document.getElementById("download-link");
+let uploadedCustomLanguage = null; // Variable to store uploaded custom language data
 
 window.addEventListener('DOMContentLoaded', () => {
     const generateBtn = document.getElementById('generate-btn');
@@ -22,7 +23,25 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }
         result.innerHTML = generateParagraphs(); // Generate paragraphs
-    });
+    },
+        downloadLink.addEventListener('click', () => {
+                saveLanguage(); // Save custom language as JSON file when download link is clicked
+        }
+    ),
+        // Add event listener for file input change to handle custom language file upload
+        document.getElementById('file-input').addEventListener('change', (event) => {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                uploadedCustomLanguage = JSON.parse(e.target.result);
+                // Add the uploaded custom language to the allLanguages object
+                allLanguages.languages.push(uploadedCustomLanguage);
+                // load the data from the uploaded file into the custom language fields
+                document.getElementById("custom-lang-sounds").value = uploadedCustomLanguage.C.concat(uploadedCustomLanguage.V).join(" ");
+                document.getElementById("custom-lang-syllables").value = uploadedCustomLanguage.syllables.join(" ");
+            };
+            reader.readAsText(file);
+        }));
 });
 
 function generateParagraphs() {
@@ -408,3 +427,16 @@ function requiredFieldsIfCustomLanguageSelected() {
                 return true; // Allow generation to proceed
             }
 }}
+
+function saveLanguage() {
+    // get the custom language object from the allLanguages object
+    let customLanguage = allLanguages.languages[allLanguages.languages.length - 1]; // get the last language in the array, which should be the custom language
+    customLanguage.name = prompt("Enter a name for your custom language:"); // Prompt the user to enter a name for their custom language
+
+    // Create a blob from the custom language object and create a download link
+    let blob = new Blob([JSON.stringify(customLanguage)], { type: "application/json" });
+    let url = URL.createObjectURL(blob);
+    let downloadLink = document.getElementById("download-link");
+    downloadLink.href = url;
+    downloadLink.download = `${customLanguage.name}.json`; // Set the download filename to the custom language name
+}
