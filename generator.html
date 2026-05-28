@@ -32,9 +32,6 @@
             <option value="custom-lang">Custom Language</option>
         </select>
 
-        <label for="custom-lang-name">Custom Language:</label>
-        <input type="text" id="custom-lang-name" name="custom-lang-name" size="40" placeholder="Language's name" />
-
         <div class="settings">
             <label for="sentence-count">Number of sentences:</label>
             <input type="number" id="sentence-count" name="sentence-count" min="1" max="100" value="5">
@@ -46,9 +43,9 @@
         <div class="custom-lang-settings">
             <label for="custom-lang-sounds">Custom Language settings</label>
             <textarea id="custom-lang-sounds" name="custom-lang-sounds"
-                placeholder="Enter sounds separated by a space"></textarea>
+                placeholder="Enter sounds separated by a space, e.g., a a' ê ö b th kh t s rr ñ..."></textarea>
             <textarea id="custom-lang-syllables" name="custom-lang-syllables"
-                placeholder="Enter syllables separated by a space"></textarea>
+                placeholder="Enter syllables separated by a space, e.g., CV CVC VCC CCVCC..."></textarea>
         </div>
         <button id="generate-btn">Generate</button>
         <div class="output">

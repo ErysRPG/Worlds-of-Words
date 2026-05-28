@@ -8,15 +8,21 @@
         },
         {
             "name": "lang-dwarvish",
-            "V": ["a", "i", "o", "u"],
-            "C": ["d", "g", "k", "m", "r"],
-            "syllables": ["CVC", "CCVC", "CVCC"]
+            "V": ["a", "i", "o", "u", "â", "û", "î", "ô"],
+            "C": ["d", "g", "k", "m", "r", "p", "t", "z", "kh", "zh","gh"],
+            "syllables": ["CVC"]
         },
         {
             "name": "lang-draconic",
             "V": ["a", "e", "i", "o", "u", "g", "h", "r"],
             "C": ["g", "h", "r"],
             "syllables": ["CCVC", "CVCC", "CVC"]
+        },
+         {
+            "name": "lang-alien",
+            "V": ["a", "e", "i", "o", "u", "a'", "e'", "i'", "o'", "u'"],
+            "C": ["z", "x", "q", "k", "t", "s", "n", "m", "sh"],
+            "syllables": ["CCVC", "CVCC", "CVC", "VC", "VVC"]
         }
     ]
 }
